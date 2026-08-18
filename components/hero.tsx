@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { Sparkles, HelpCircle } from 'lucide-react'
+import { Sparkles, Download } from 'lucide-react'
 import { Reveal } from '@/components/reveal'
 
 export function Hero() {
@@ -73,8 +73,8 @@ export function Hero() {
                 aria-hidden
                 className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full"
               />
-              <HelpCircle className="h-6 w-6" />
-              How to use
+              <Download className="h-6 w-6" />
+              Download for Windows
             </a>
             <p className="text-sm text-muted-foreground">
               Free • Windows 10 &amp; 11 • ~40 MB installer
