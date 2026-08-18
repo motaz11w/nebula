@@ -16,7 +16,7 @@ const links = [
     title: 'My links',
     handle: 'guns.lol/error_',
     description: 'Find all my profiles, socials and projects in one place.',
-    href: 'https://guns.lol/error_',
+    href: 'https://guns.lol/error_1',
     image: '/links/gunslol.png',
     icon: Link2,
     accent: 'text-[#a78bfa]',
