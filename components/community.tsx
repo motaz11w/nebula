@@ -25,7 +25,7 @@ const links = [
     title: 'Join the Discord',
     handle: 'https://discord.gg/ZEHP4hfjJ',
     description: 'Chat with the community, get help and share your setups.',
-    href: 'https://discord.gg/rWf2NJyvR5',
+    href: 'https://discord.gg/ZEHP4hfjJ',
     image: '/links/discord.png',
     icon: MessageCircle,
     accent: 'text-[#7289da]',
