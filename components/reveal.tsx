@@ -33,6 +33,15 @@ export function Reveal({
     const node = ref.current
     if (!node) return
 
+    // If the element is already within (or above) the viewport on mount —
+    // e.g. after a direct #hash navigation — reveal it right away so content
+    // can never get stuck hidden when the observer doesn't fire.
+    const rect = node.getBoundingClientRect()
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      setVisible(true)
+      if (once) return
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -44,11 +53,18 @@ export function Reveal({
           }
         })
       },
-      { threshold: 0.15, rootMargin: '0px 0px -8% 0px' },
+      { threshold: 0, rootMargin: '0px 0px -8% 0px' },
     )
 
     observer.observe(node)
-    return () => observer.disconnect()
+
+    // Safety net: never leave content permanently invisible.
+    const fallback = window.setTimeout(() => setVisible(true), 1200)
+
+    return () => {
+      observer.disconnect()
+      window.clearTimeout(fallback)
+    }
   }, [once])
 
   return (
