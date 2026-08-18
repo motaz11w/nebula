@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   description:
     'Nebula Launcher is a sleek, modern Minecraft launcher with instant mod loader selection, Microsoft & offline accounts, built-in server hosting and a beautiful interface. Download for Windows.',
   generator: 'v0.app',
+  icons: {
+    icon: '/favicon.png',
+  },
 }
 
 export const viewport: Viewport = {
