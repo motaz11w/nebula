@@ -9,6 +9,7 @@ const navLinks = [
   { label: 'Features', href: '#features' },
   { label: 'Showcase', href: '#showcase' },
   { label: 'Gallery', href: '#gallery' },
+  { label: 'How to use', href: '#how-to-use' },
   { label: 'Community', href: '#community' },
 ]
 

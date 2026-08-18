@@ -29,7 +29,7 @@ export function DownloadCta() {
             </p>
 
             <a
-              href="#top"
+              href="https://github.com/motaz11w/nebula-launcher/releases/download/v0.66.2/nebula-0.66.2-win32-x64.zip"
               className="group relative mt-9 inline-flex items-center gap-3 overflow-hidden rounded-2xl bg-brand px-9 py-5 text-lg font-semibold text-brand-foreground glow-brand transition-transform hover:scale-[1.03]"
             >
               <span
