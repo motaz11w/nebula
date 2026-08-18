@@ -66,7 +66,7 @@ export function Hero() {
         <Reveal delay={300}>
           <div className="mt-10 flex flex-col items-center gap-4">
             <a
-              href="https://github.com/motaz11w/nebula-launcher/releases/download/v0.66.2/nebula-0.66.2-win32-x64.zip"
+              href="https://github.com/motaz11w/nebula/releases/download/v0.66.4/nebula-0.66.2-win32-x64.zip"
               className="group relative inline-flex items-center gap-3 overflow-hidden rounded-2xl bg-brand px-9 py-5 text-lg font-semibold text-brand-foreground glow-brand transition-transform hover:scale-[1.03]"
             >
               <span
