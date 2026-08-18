@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { Sparkles, Download } from 'lucide-react'
+import { Sparkles, HelpCircle } from 'lucide-react'
 import { Reveal } from '@/components/reveal'
 
 export function Hero() {
@@ -66,15 +66,15 @@ export function Hero() {
         <Reveal delay={300}>
           <div className="mt-10 flex flex-col items-center gap-4">
             <a
-              href="https://github.com/motaz11w/nebula/releases/download/v0.66.4/nebula-0.66.2-win32-x64.zip"
+              href="/#how-to-use"
               className="group relative inline-flex items-center gap-3 overflow-hidden rounded-2xl bg-brand px-9 py-5 text-lg font-semibold text-brand-foreground glow-brand transition-transform hover:scale-[1.03]"
             >
               <span
                 aria-hidden
                 className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full"
               />
-              <Download className="h-6 w-6" />
-              Download for Windows
+              <HelpCircle className="h-6 w-6" />
+              How to use
             </a>
             <p className="text-sm text-muted-foreground">
               Free • Windows 10 &amp; 11 • ~40 MB installer
