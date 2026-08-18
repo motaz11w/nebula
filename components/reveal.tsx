@@ -1,0 +1,69 @@
+'use client'
+
+import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { cn } from '@/lib/utils'
+
+type Direction = 'up' | 'down' | 'left' | 'right' | 'scale'
+
+const hiddenByDirection: Record<Direction, string> = {
+  up: 'translate-y-12',
+  down: '-translate-y-12',
+  left: 'translate-x-16',
+  right: '-translate-x-16',
+  scale: 'scale-95',
+}
+
+export function Reveal({
+  children,
+  className,
+  direction = 'up',
+  delay = 0,
+  once = true,
+}: {
+  children: ReactNode
+  className?: string
+  direction?: Direction
+  delay?: number
+  once?: boolean
+}) {
+  const ref = useRef<HTMLDivElement>(null)
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const node = ref.current
+    if (!node) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisible(true)
+            if (once) observer.unobserve(entry.target)
+          } else if (!once) {
+            setVisible(false)
+          }
+        })
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -8% 0px' },
+    )
+
+    observer.observe(node)
+    return () => observer.disconnect()
+  }, [once])
+
+  return (
+    <div
+      ref={ref}
+      style={{ transitionDelay: `${delay}ms` }}
+      className={cn(
+        'transition-all duration-700 ease-out will-change-transform',
+        visible
+          ? 'translate-x-0 translate-y-0 scale-100 opacity-100 blur-0'
+          : cn('opacity-0 blur-[2px]', hiddenByDirection[direction]),
+        className,
+      )}
+    >
+      {children}
+    </div>
+  )
+}
