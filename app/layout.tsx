@@ -23,6 +23,23 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.png',
   },
+  openGraph: {
+    title: 'Nebula Launcher — The Modern Minecraft Launcher',
+    description:
+      'Nebula Launcher is a sleek, modern Minecraft launcher with instant mod loader selection, Microsoft & offline accounts, built-in server hosting and a beautiful interface.',
+    url: 'https://nebulapp.duckdns.org',
+    siteName: 'Nebula Launcher',
+    images: [
+      {
+        url: '/og-image.png', // تأكد أن اسم الصورة يطابق صورتك المرفوعة في مجلد public
+        width: 1200,
+        height: 630,
+        alt: 'Nebula Launcher Logo',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
 }
 
 export const viewport: Viewport = {
