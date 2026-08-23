@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: 'Nebula Launcher',
     images: [
       {
-        url: '/edwc1.png',
+        url: '/edwc1.png?v=5',
         width: 1200,
         height: 630,
         alt: 'Nebula Launcher Logo',
