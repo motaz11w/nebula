@@ -16,6 +16,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  // إضافة أساس الرابط لضمان عمل الصورة على الرابط العادي ورابط الـ www
+  metadataBase: new URL('https://nebulapp.duckdns.org'),
   title: 'Nebula Launcher — The Modern Minecraft Launcher',
   description:
     'Nebula Launcher is a sleek, modern Minecraft launcher with instant mod loader selection, Microsoft & offline accounts, built-in server hosting and a beautiful interface. Download for Windows.',
@@ -31,7 +33,7 @@ export const metadata: Metadata = {
     siteName: 'Nebula Launcher',
     images: [
       {
-        url: '/og-image.png', // تأكد أن اسم الصورة يطابق صورتك المرفوعة في مجلد public
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Nebula Launcher Logo',
